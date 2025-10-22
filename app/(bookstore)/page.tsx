@@ -1,4 +1,6 @@
-import BookstoreClientPage from './(bookstore)/BookstoreClientPage';
+//app/(bookstore)/page.tsx
+
+import BookstoreClientPage from './BookstoreClientPage';
 
 export default function BookstorePage() {
   return (
