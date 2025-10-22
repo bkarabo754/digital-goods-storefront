@@ -94,13 +94,6 @@ Granular subscriptions prevent re-renders
 TypeScript-friendly
 No Provider wrapper needed
 
-Why No useEffect?
-Traditional approach (with useEffect):
-typescript// OLD: Manual sync with localStorage
-useEffect(() => {
-const stored = localStorage.getItem('cart');
-setCart(JSON.parse(stored));
-}, []);
 
 Benefits for using Zustand:
 
