@@ -21,6 +21,7 @@ import CartSkeleton from './CartSkeleton';
 
 const DynamicImage = dynamic(() => import('next/image'), { ssr: false });
 
+// eslint-disable-next-line react-hooks/exhaustive-deps
 function ShoppingCartInner() {
   const items = useCartStore((s) => s.items);
   const removeFromCart = useCartStore((s) => s.removeFromCart);

@@ -37,7 +37,7 @@ function BookCardComponent({
           alt={`Cover of ${book.title}`}
           fill
           className="object-cover object-center transition-transform duration-300 group-hover:scale-105"
-          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 30vw, 220vw"
           priority={false}
           fetchPriority="high"
           quality={75}

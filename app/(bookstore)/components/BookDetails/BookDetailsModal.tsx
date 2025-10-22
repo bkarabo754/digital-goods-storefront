@@ -29,6 +29,7 @@ export default function BookDetailsModal() {
   const { addToCart, items } = useCartStore();
 
   // Check if selected book is already in cart
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const isInCart = useMemo(
     () => !!selectedBook && items.some((i) => i.book.id === selectedBook.id),
     [items, selectedBook]

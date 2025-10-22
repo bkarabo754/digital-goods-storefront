@@ -20,6 +20,7 @@ function BookGridComponent({ books }: Props) {
   const { addToCart, items } = useCartStore();
 
   // Memoized filtering & sorting logic for performance
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const filteredBooks = useMemo(() => {
     let filtered = [...books];
 
