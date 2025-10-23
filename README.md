@@ -57,12 +57,13 @@ src/
 │ ├── layout.tsx # Root layout with SEO
 │ ├── page.tsx # Home page
 │ └── globals.css # Global styles
-├── (bookstore)/ # Dynamic route
+├── (bookstore)/ # Route groups
 │ ├── components/ # React components
 │ ├── BookDetails/ # Book Detail features
 │ ├── BookGrid/ # Book Grid features
 │ └── Cart/ # Cart features
 │ └── Header/ # Header features
+│ └── shopping-cart/ # Shopping Cart Items
 │ └── ui/ # Shadcn UI Components
 ├── store/ # Zustand state management
 │ ├── useBookStore.ts # Book store with persistence
@@ -93,7 +94,6 @@ Built-in persistence middleware
 Granular subscriptions prevent re-renders
 TypeScript-friendly
 No Provider wrapper needed
-
 
 Benefits for using Zustand:
 
