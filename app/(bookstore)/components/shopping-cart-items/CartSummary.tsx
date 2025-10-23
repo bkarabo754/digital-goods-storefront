@@ -12,7 +12,7 @@ interface CartSummaryProps {
     discount: number;
     total: number;
   };
-  onCloseAction: () => void; // ✅ Add this line
+  onCloseAction: () => void;
 }
 
 export default function CartSummary({
