@@ -4,7 +4,7 @@ import { useBookStore } from '@/app/(bookstore)/stores/useBookStore';
 import { useCartStore } from '@/app/(bookstore)/stores/useCartStore';
 import { Button } from '@/app/(bookstore)/components/ui/button';
 import { Input } from '@/app/(bookstore)/components/ui/input';
-import { ShoppingCart, ChevronDown, BookOpen, Search } from 'lucide-react';
+import { ShoppingCart, ChevronDown, BookOpen, Search, X } from 'lucide-react';
 
 export function Header() {
   const openCart = useBookStore((s) => s.openCart);
@@ -15,8 +15,10 @@ export function Header() {
   const sortOrder = useBookStore((s) => s.sortOrder);
   const toggleSortOrder = useBookStore((s) => s.toggleSortOrder);
 
+  const clearSearch = () => setSearchQuery('');
+
   return (
-    <header className="w-full bg-neutral-900 text-white shadow-md">
+    <header className="w-full bg-neutral-900 text-white shadow-md sticky top-0 z-50">
       <div className="container mx-auto flex flex-col md:flex-row items-center justify-between py-4 px-6 gap-4 md:gap-0">
         {/* Logo */}
         <h1
@@ -39,8 +41,15 @@ export function Header() {
               aria-label="Search books"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="pl-10 bg-neutral-800 text-white placeholder:text-neutral-400 focus:ring-2 focus:ring-emerald-500"
+              className="pl-10 pr-10 bg-neutral-800 text-white placeholder:text-neutral-400 focus:ring-2 focus:ring-emerald-500"
             />
+            {searchQuery && (
+              <X
+                className="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-neutral-400 cursor-pointer hover:text-white"
+                onClick={clearSearch}
+                aria-label="Clear search"
+              />
+            )}
           </div>
 
           <Button
